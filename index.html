@@ -58,7 +58,7 @@
   .hero {
     background: linear-gradient(135deg, #1E1B4B 0%, #4C1D95 50%, #5B21B6 100%);
     color: white;
-    padding: 60px 24px 80px;
+    padding: 24px 24px 28px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -88,25 +88,28 @@
     margin: 0 auto 2px;
     position: relative; z-index: 1;
   }
+  .logo{
+    width:10%;
+  }
   .hero-logo img {
-    width: 200;
-    height: 150px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
   }
   .hero h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(26px, 5vw, 40px);
+    font-size: clamp(20px, 4vw, 32px);
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 16px;
+    line-height: 1.1;
+    margin-bottom: 8px;
     position: relative; z-index: 1;
   }
   .hero h1 span { color: #F59E0B; }
   .hero p {
-    font-size: 16px;
+    font-size: 14px;
     color: rgba(255,255,255,0.8);
     max-width: 480px;
-    margin: 0 auto 32px;
+    margin: 0 auto 16px;
     position: relative; z-index: 1;
   }
   .hero-steps {
@@ -143,9 +146,9 @@
     padding: 0 16px;
   }
   .nav-tab {
-    padding: 14px 18px;
+    padding: 10px 14px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: var(--text-light);
     cursor: pointer;
@@ -503,9 +506,7 @@
 
 <!-- ── HERO ── -->
 <div class="hero">
-  <div class="hero-logo">
-    <img class="" src="./hero-logo.png" alt="Logo"> 
-  </div>
+    <img class="logo" src="./hero-logo.png" alt="Logo"> 
   <br>
   <h1>Parent Dashboard<br><span>Help & Setup Guide</span></h1>
   <p>Everything you need to register, get approved, and support your child's home projects — step by step.</p>
