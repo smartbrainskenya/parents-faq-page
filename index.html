@@ -3,1039 +3,556 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parent Guide — Smart Brains Kenya</title>
-<meta name="description" content="Complete setup guide for Smart Brains Kenya parents. Learn how to find your child's username, register, get approved, and submit projects.">
-<meta name="theme-color" content="#5B21B6">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="./hero-logo.png">
-<link rel="shortcut icon" href="./hero-logo.png">
-
-<!-- Open Graph / Social Media Preview -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://parents-faq-page.vercel.app/">
-<meta property="og:title" content="Parent Dashboard Help & Setup Guide">
-<meta property="og:description" content="Complete setup guide for Smart Brains Kenya parents. Learn how to find your child's username, register, get approved, and submit projects.">
-<meta property="og:image" content="./hero-logo.png">
-<meta property="og:site_name" content="Smart Brains Kenya">
-
-<!-- Twitter Card -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Parent Dashboard Help & Setup Guide">
-<meta property="twitter:description" content="Complete setup guide for Smart Brains Kenya parents.">
-<meta property="twitter:image" content="./hero-logo.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<title>Parent Help — Smart Brains Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --purple: #5B21B6;
-    --purple-light: #7C3AED;
-    --purple-pale: #EDE9FE;
-    --yellow: #F59E0B;
-    --yellow-light: #FEF3C7;
-    --green: #059669;
-    --green-light: #D1FAE5;
-    --red: #DC2626;
-    --red-light: #FEE2E2;
-    --dark: #1E1B4B;
-    --text: #374151;
-    --text-light: #6B7280;
-    --border: #E5E7EB;
-    --white: #FFFFFF;
-    --bg: #F9FAFB;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin:0; padding:0; box-sizing:border-box; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
+    font-family: 'Nunito', sans-serif;
+    background: #F0F4FF;
+    min-height: 100vh;
   }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
-    background: linear-gradient(135deg, #1E1B4B 0%, #4C1D95 50%, #5B21B6 100%);
-    color: white;
-    padding: 24px 24px 28px;
+    background: linear-gradient(160deg, #1a0533 0%, #3b0f80 55%, #6d28d9 100%);
+    padding: 48px 20px 64px;
     text-align: center;
     position: relative;
     overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    width: 400px; height: 400px;
-    background: rgba(245,158,11,0.12);
-    border-radius: 50%;
-    top: -100px; right: -100px;
   }
   .hero::after {
     content: '';
     position: absolute;
-    width: 300px; height: 300px;
-    background: rgba(124,58,237,0.2);
-    border-radius: 50%;
-    bottom: -80px; left: -80px;
+    bottom: -2px; left: 0; right: 0;
+    height: 40px;
+    background: #F0F4FF;
+    clip-path: ellipse(55% 100% at 50% 100%);
   }
-  .hero-logo {
-    display: flex;
+  .logo-pill {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 2px 2px;
-    margin: 0 auto 2px;
-    position: relative; z-index: 1;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 100px;
+    padding: 7px 16px;
+    margin-bottom: 24px;
   }
-  .logo{
-    width:10%;
-  }
-  .hero-logo img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
+  .logo-pill svg { width: 18px; height: 18px; }
+  .logo-pill span {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 1px;
   }
   .hero h1 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(20px, 4vw, 32px);
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(24px, 6vw, 36px);
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 8px;
-    position: relative; z-index: 1;
-  }
-  .hero h1 span { color: #F59E0B; }
-  .hero p {
-    font-size: 14px;
-    color: rgba(255,255,255,0.8);
-    max-width: 480px;
-    margin: 0 auto 16px;
-    position: relative; z-index: 1;
-  }
-  .hero-steps {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    position: relative; z-index: 1;
-  }
-  .hero-step-pill {
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 50px;
-    padding: 6px 14px;
-    font-size: 13px;
     color: white;
-    font-weight: 500;
-  }
-
-  /* ── NAV TABS ── */
-  .nav-wrap {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: white;
-    border-bottom: 2px solid var(--border);
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .nav-wrap::-webkit-scrollbar { display: none; }
-  .nav-tabs {
-    display: flex;
-    min-width: max-content;
-    padding: 0 16px;
-  }
-  .nav-tab {
-    padding: 10px 14px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-light);
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
-    transition: all 0.2s;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .nav-tab:hover, .nav-tab.active {
-    color: var(--purple);
-    border-bottom-color: var(--purple);
-  }
-
-  /* ── MAIN LAYOUT ── */
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-
-  /* ── SECTION ── */
-  .section { padding: 48px 0 24px; }
-  .section-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-  .section-number {
-    flex-shrink: 0;
-    width: 44px; height: 44px;
-    background: var(--purple);
-    color: white;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    margin-top: 2px;
-  }
-  .section-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--dark);
-    line-height: 1.3;
-  }
-  .section-subtitle {
-    font-size: 14px;
-    color: var(--text-light);
-    margin-top: 4px;
-  }
-
-  /* ── STEP CARDS ── */
-  .steps {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    position: relative;
-  }
-  .steps::before {
-    content: '';
-    position: absolute;
-    left: 19px;
-    top: 40px;
-    bottom: 40px;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--purple-pale), var(--border));
-  }
-  .step {
-    display: flex;
-    gap: 16px;
-    padding-bottom: 28px;
-    position: relative;
-  }
-  .step-dot {
-    flex-shrink: 0;
-    width: 40px; height: 40px;
-    background: white;
-    border: 3px solid var(--purple);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--purple);
-    z-index: 1;
-  }
-  .step-dot.done { background: var(--purple); color: white; }
-  .step-body {
-    flex: 1;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  }
-  .step-body h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--dark);
-    margin-bottom: 6px;
-  }
-  .step-body p { font-size: 14px; color: var(--text); line-height: 1.65; }
-
-  /* ── ALERT BOXES ── */
-  .alert {
-    display: flex;
-    gap: 12px;
-    padding: 16px;
-    border-radius: 12px;
-    margin: 16px 0;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .alert-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-  .alert.warning  { background: #FFFBEB; border: 1px solid #FDE68A; color: #92400E; }
-  .alert.danger   { background: var(--red-light); border: 1px solid #FECACA; color: #7F1D1D; }
-  .alert.success  { background: var(--green-light); border: 1px solid #A7F3D0; color: #064E3B; }
-  .alert.info     { background: var(--purple-pale); border: 1px solid #C4B5FD; color: #3B0764; }
-  .alert strong { font-weight: 700; }
-
-  /* ── USSD CODE BOX ── */
-  .ussd-box {
-    background: var(--dark);
-    border-radius: 16px;
-    padding: 24px;
-    text-align: center;
-    margin: 20px 0;
-  }
-  .ussd-label {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-  }
-  .ussd-code {
-    font-family: 'Courier New', monospace;
-    font-size: 28px;
-    font-weight: 700;
-    color: #F59E0B;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
-  .ussd-instruction { font-size: 13px; color: rgba(255,255,255,0.65); }
-
-  /* ── USERNAME DEMO ── */
-  .username-demo {
-    background: white;
-    border: 2px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-    margin: 16px 0;
-  }
-  .username-demo-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-light);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
+    line-height: 1.2;
     margin-bottom: 12px;
   }
-  .username-formula {
+  .hero h1 em { color: #FCD34D; font-style: normal; }
+  .hero p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* CARDS GRID */
+  .cards {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: relative;
+    overflow: hidden;
+    animation: rise 0.4s ease both;
+  }
+  .card:nth-child(1) { animation-delay: 0.05s; }
+  .card:nth-child(2) { animation-delay: 0.1s; }
+  .card:nth-child(3) { animation-delay: 0.15s; }
+  .card:nth-child(4) { animation-delay: 0.2s; }
+  .card:nth-child(5) { animation-delay: 0.25s; }
+  @keyframes rise {
+    from { opacity:0; transform:translateY(16px); }
+    to { opacity:1; transform:translateY(0); }
+  }
+
+  .card-accent {
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .card-head {
     display: flex;
     align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
+    gap: 14px;
     margin-bottom: 16px;
   }
-  .formula-part {
-    background: var(--purple-pale);
-    color: var(--purple);
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
+  .card-icon {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
   }
-  .formula-plus, .formula-equals { color: var(--text-light); font-size: 16px; font-weight: 700; }
-  .formula-result {
-    background: var(--yellow-light);
-    color: #92400E;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-family: 'Courier New', monospace;
+  .card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
     font-weight: 700;
-    font-size: 13px;
+    color: #1E1B4B;
+    line-height: 1.3;
   }
-  .username-examples { display: flex; flex-direction: column; gap: 8px; }
+  .card-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-top: 3px;
+  }
+
+  /* CARD: USERNAME — RED */
+  .card-username .card-accent { background: #EF4444; }
+  .card-username .card-icon { background: #FEF2F2; }
+  .card-username .card-tag { background: #FEE2E2; color: #B91C1C; }
+
+  .warning-banner {
+    background: #FEF2F2;
+    border: 1.5px solid #FECACA;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .warning-banner .wi { font-size: 18px; flex-shrink:0; margin-top:1px; }
+  .warning-banner p { font-size: 14px; color: #7F1D1D; font-weight: 600; line-height: 1.5; }
+
+  .username-box {
+    background: #F8F4FF;
+    border: 1.5px dashed #A78BFA;
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .username-box p {
+    font-size: 13px;
+    color: #4C1D95;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
   .username-example {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 14px;
-    background: var(--bg);
-    border-radius: 10px;
-    font-size: 13px;
-  }
-  .username-example .school { color: var(--text-light); }
-  .username-example .code { font-family: 'Courier New', monospace; font-weight: 700; color: var(--purple); }
-
-  /* ── FAQ ACCORDION ── */
-  .faq-section {
-    padding: 40px 16px;
-    background: white;
-    margin: 0 -16px;
-  }
-  .faq-header { text-align: center; margin-bottom: 32px; }
-  .faq-header h2 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--dark);
-    margin-bottom: 8px;
-  }
-  .faq-header p { font-size: 14px; color: var(--text-light); }
-  .faq-item {
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    transition: all 0.2s;
-  }
-  .faq-item.open { border-color: var(--purple); box-shadow: 0 0 0 3px var(--purple-pale); }
-  .faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 18px 20px;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
     justify-content: space-between;
+    font-size: 13px;
+    padding: 8px 12px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    border: 1px solid #E5E7EB;
+  }
+  .username-example:last-child { margin-bottom: 0; }
+  .username-example .school { color: #6B7280; }
+  .username-example .code { font-family: monospace; font-weight: 700; color: #6D28D9; font-size: 13px; }
+
+  .how-to-find {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    background: #F9FAFB;
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .how-to-find strong { color: #1E1B4B; }
+
+  /* CARD: PHONE — BLUE */
+  .card-phone .card-accent { background: #3B82F6; }
+  .card-phone .card-icon { background: #EFF6FF; }
+  .card-phone .card-tag { background: #DBEAFE; color: #1D4ED8; }
+
+  .phone-demo {
+    display: flex;
     align-items: center;
     gap: 12px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--dark);
-    line-height: 1.4;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
   }
-  .faq-question:hover { background: var(--bg); }
-  .faq-icon {
+  .phone-demo-item {
+    flex: 1;
+    min-width: 120px;
+    border-radius: 10px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .phone-demo-item .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; margin-bottom: 6px; }
+  .phone-demo-item .value { font-size: 18px; font-weight: 700; font-family: monospace; }
+  .phone-wrong { background: #FEF2F2; }
+  .phone-wrong .label { color: #DC2626; }
+  .phone-wrong .value { color: #DC2626; text-decoration: line-through; }
+  .phone-arrow { font-size: 20px; color: #9CA3AF; flex-shrink: 0; }
+  .phone-right { background: #F0FDF4; }
+  .phone-right .label { color: #059669; }
+  .phone-right .value { color: #059669; }
+  .phone-note { font-size: 13px; color: #6B7280; line-height: 1.5; }
+
+  /* CARD: SMS BLACKLIST — ORANGE */
+  .card-sms .card-accent { background: #F59E0B; }
+  .card-sms .card-icon { background: #FFFBEB; }
+  .card-sms .card-tag { background: #FEF3C7; color: #92400E; }
+
+  .ussd-block {
+    background: #111827;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    margin: 14px 0;
+  }
+  .ussd-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+  .ussd-code { font-family: monospace; font-size: 26px; font-weight: 700; color: #FCD34D; letter-spacing: 3px; margin-bottom: 4px; }
+  .ussd-sub { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+  .sms-steps { display: flex; flex-direction: column; gap: 8px; }
+  .sms-step { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #374151; line-height: 1.5; }
+  .sms-step-num {
     flex-shrink: 0;
-    width: 28px; height: 28px;
-    background: var(--purple-pale);
+    width: 22px; height: 22px;
+    background: #FEF3C7;
+    color: #92400E;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  /* CARD: APPROVAL — GREEN */
+  .card-approval .card-accent { background: #10B981; }
+  .card-approval .card-icon { background: #ECFDF5; }
+  .card-approval .card-tag { background: #D1FAE5; color: #065F46; }
+
+  .approval-flow { display: flex; flex-direction: column; gap: 0; }
+  .approval-step { display: flex; gap: 12px; padding-bottom: 16px; position: relative; }
+  .approval-step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 11px; top: 26px; bottom: 0;
+    width: 2px;
+    background: #D1FAE5;
+  }
+  .astep-dot {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    background: #10B981;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    color: var(--purple);
-    transition: transform 0.3s;
-  }
-  .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--purple); color: white; }
-  .faq-answer {
-    display: none;
-    padding: 16px 20px 18px;
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.7;
-    border-top: 1px solid var(--border);
-  }
-  .faq-item.open .faq-answer { display: block; }
-
-  /* ── DIVIDER ── */
-  .divider { height: 1px; background: var(--border); margin: 16px 0; }
-  .section-divider {
-    height: 8px;
-    background: var(--bg);
-    margin: 0 -16px;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* ── PRO TIP ── */
-  .pro-tip {
-    background: linear-gradient(135deg, var(--yellow-light), #FFFDE7);
-    border: 1px solid #FDE68A;
-    border-left: 4px solid var(--yellow);
-    border-radius: 12px;
-    padding: 16px;
-    margin: 16px 0;
-    font-size: 14px;
-    color: #78350F;
-  }
-  .pro-tip strong { font-family: 'Plus Jakarta Sans', sans-serif; }
-
-  /* ── BADGE ── */
-  .badge {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 50px;
     font-size: 11px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.3px;
-    margin-left: 8px;
-    vertical-align: middle;
-  }
-  .badge-important { background: #FEF2F2; color: #DC2626; }
-  .badge-new { background: var(--green-light); color: var(--green); }
-
-  /* ── CONTACT ── */
-  .contact-section {
-    background: linear-gradient(135deg, #1E1B4B, #4C1D95);
     color: white;
-    padding: 48px 24px;
+    z-index: 1;
+  }
+  .astep-text { font-size: 14px; color: #374151; line-height: 1.55; padding-top: 2px; }
+  .astep-text strong { color: #1E1B4B; font-weight: 700; }
+  .sms-preview {
+    background: #F0FDF4;
+    border-left: 3px solid #10B981;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 12px;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #065F46;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* CARD: SUBMIT PROJECT — PURPLE */
+  .card-project .card-accent { background: #6D28D9; }
+  .card-project .card-icon { background: #F5F3FF; }
+  .card-project .card-tag { background: #EDE9FE; color: #4C1D95; }
+
+  .project-steps { display: flex; flex-direction: column; gap: 10px; }
+  .pstep {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #F9FAFB;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.5;
+  }
+  .pstep-num {
+    flex-shrink: 0;
+    width: 24px; height: 24px;
+    background: #6D28D9;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .submit-btn-preview {
+    background: #6D28D9;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 16px;
     text-align: center;
-    margin-top: 48px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0.9;
   }
-  .contact-section h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    margin-bottom: 8px;
+  .submit-note {
+    font-size: 12px;
+    color: #9CA3AF;
+    text-align: center;
+    margin-top: 8px;
   }
-  .contact-section p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 28px; }
-  .contact-cards { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .contact-card {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 14px;
-    padding: 16px 20px;
-    min-width: 160px;
-    text-decoration: none;
-    color: white;
-    transition: background 0.2s;
-  }
-  .contact-card:hover { background: rgba(255,255,255,0.2); }
-  .contact-card-icon { font-size: 24px; margin-bottom: 6px; }
-  .contact-card-label { font-size: 11px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.8px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; }
-  .contact-card-value { font-size: 14px; font-weight: 600; margin-top: 2px; }
 
-  @media (max-width: 480px) {
-    .hero { padding: 48px 20px 64px; }
-    .formula-part, .formula-result { font-size: 12px; padding: 5px 10px; }
-    .contact-cards { flex-direction: column; align-items: center; }
-    .contact-card { width: 100%; max-width: 280px; }
+  /* CONTACT FOOTER */
+  .footer {
+    background: linear-gradient(135deg, #1a0533, #3b0f80);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .footer h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .footer p { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 24px; }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .footer-link {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 12px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 </style>
 </head>
 <body>
 
-<!-- ── HERO ── -->
 <div class="hero">
-    <img class="logo" src="./hero-logo.png" alt="Logo"> 
-  <br>
-  <h1>Parent Dashboard<br><span>Help & Setup Guide</span></h1>
-  <p>Everything you need to register, get approved, and support your child's home projects — step by step.</p>
-  <div class="hero-steps">
-    <div class="hero-step-pill">Find Username</div>
-    <div class="hero-step-pill">Register</div>
-    <div class="hero-step-pill">Get Approved</div>
-    <div class="hero-step-pill">Submit Project</div>
+  <div class="logo-pill">
+    <span>SMART BRAINS KENYA</span>
+  </div>
+  <h1>Parent Dashboard<br><em>Quick Help Guide</em></h1>
+  <p>Everything you need — short, simple, and straight to the point.</p>
+</div>
+
+<div class="cards">
+
+  <!-- 1. USERNAME -->
+  <div class="card card-username">
+    <div class="card-accent"></div>
+    <div class="card-head">
+      <div class="card-icon">🔐</div>
+      <div>
+        <div class="card-title">Child's Student Username</div>
+        <div class="card-tag">Most Important</div>
+      </div>
+    </div>
+
+    <div class="warning-banner">
+      <div class="wi">⛔</div>
+      <p>Ask your child to write their username for you. Do not guess it — a wrong username means your registration will not work.</p>
+    </div>
+
+    <div class="username-box">
+      <p>📋 The username looks like this:</p>
+      <div class="username-example">
+        <span class="school">Mother Theresa Fantoni</span>
+        <span class="code">mtf-duanekibet</span>
+      </div>
+      <div class="username-example">
+        <span class="school">Office School</span>
+        <span class="code">os-justinharmon</span>
+      </div>
+    </div>
+
+    <div class="how-to-find" style="margin-top:14px;">
+      <strong>How to get it right:</strong> Ask your child to open the <strong>Student Section</strong> on smartbrainskenya.com and log in. If they log in successfully — that's the correct username. Have them write it for you before you register.
+    </div>
+  </div>
+
+  <!-- 2. PHONE NUMBER -->
+  <div class="card card-phone">
+    <div class="card-accent"></div>
+    <div class="card-head">
+      <div class="card-icon">📱</div>
+      <div>
+        <div class="card-title">Your Phone Number</div>
+        <div class="card-tag">Login Username</div>
+      </div>
+    </div>
+
+    <div class="phone-demo">
+      <div class="phone-demo-item phone-wrong">
+        <div class="label">❌ Wrong</div>
+        <div class="value">0712345678</div>
+      </div>
+      <div class="phone-arrow">→</div>
+      <div class="phone-demo-item phone-right">
+        <div class="label">✅ Correct</div>
+        <div class="value">712345678</div>
+      </div>
+    </div>
+    <p class="phone-note">Enter your WhatsApp number <strong>without the leading zero</strong>. This number also becomes your login username for the parent dashboard.</p>
+  </div>
+
+  <!-- 3. SMS NOT ARRIVING -->
+  <div class="card card-sms">
+    <div class="card-accent"></div>
+    <div class="card-head">
+      <div class="card-icon">📵</div>
+      <div>
+        <div class="card-title">Not Receiving SMS?</div>
+        <div class="card-tag">Fix in 2 Minutes</div>
+      </div>
+    </div>
+
+    <p style="font-size:14px; color:#374151; margin-bottom:4px;">Your number may be blocking promotional messages. Fix it by dialling:</p>
+
+    <div class="ussd-block">
+      <div class="ussd-label">Dial this on your phone</div>
+      <div class="ussd-code">*456*9*5*5#</div>
+      <div class="ussd-sub">Select "Allow All Promotional Messages" when prompted</div>
+    </div>
+
+    <div class="sms-steps">
+      <div class="sms-step"><div class="sms-step-num">1</div>Dial <strong>*456*9*5*5#</strong> and press call</div>
+      <div class="sms-step"><div class="sms-step-num">2</div>Follow the prompts to allow all promotional messages</div>
+      <div class="sms-step"><div class="sms-step-num">3</div>Wait 1 hour, then ask your child to request the access code again</div>
+    </div>
+  </div>
+
+  <!-- 4. APPROVAL -->
+  <div class="card card-approval">
+    <div class="card-accent"></div>
+    <div class="card-head">
+      <div class="card-icon">✅</div>
+      <div>
+        <div class="card-title">Getting Your Account Approved</div>
+        <div class="card-tag">After Registration</div>
+      </div>
+    </div>
+
+    <div class="approval-flow">
+      <div class="approval-step">
+        <div class="astep-dot">1</div>
+        <div class="astep-text">Register your account on the parent dashboard</div>
+      </div>
+      <div class="approval-step">
+        <div class="astep-dot">2</div>
+        <div class="astep-text"><strong>Contact your school's ICT teacher or Coding patron</strong> and let them know you've registered — they approve your account from the school side</div>
+      </div>
+      <div class="approval-step">
+        <div class="astep-dot">3</div>
+        <div class="astep-text">
+          You'll receive an SMS like this:
+          <div class="sms-preview">"Hi [Name], your Smart Brains Kenya parent account has been approved! Login at application.smartbrainskenya.com..."</div>
+        </div>
+      </div>
+      <div class="approval-step">
+        <div class="astep-dot">4</div>
+        <div class="astep-text"><strong>Your child can now log in</strong>, go to Home Projects, and request an access code — which will be sent to your number</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. SUBMIT PROJECT -->
+  <div class="card card-project">
+    <div class="card-accent"></div>
+    <div class="card-head">
+      <div class="card-icon">📤</div>
+      <div>
+        <div class="card-title">Submitting Your Child's Project</div>
+        <div class="card-tag">For Review & Grading</div>
+      </div>
+    </div>
+
+    <div class="project-steps">
+      <div class="pstep">
+        <div class="pstep-num">1</div>
+        <div>Log in to your Parent Dashboard and tap <strong>Projects</strong> at the bottom</div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">2</div>
+        <div>Select the project for the right child (if you have more than one linked)</div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">3</div>
+        <div>Optionally tap <strong>Feedback</strong> to leave a note for the tutor</div>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">4</div>
+        <div>Tap the button below and confirm — the tutor will receive it for grading</div>
+      </div>
+    </div>
+
+    <div class="submit-btn-preview">
+      <span>➤</span> Submit for Tutor Review
+    </div>
+    <p class="submit-note">Once submitted, your child cannot edit the project until the tutor responds</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <h3>Still need help?</h3>
+  <p>We're here to assist you</p>
+  <div class="footer-links">
+    <a class="footer-link" href="tel:+254793474747">📞 +254 793 47 47 47</a>
+    <a class="footer-link" href="mailto:info@smartbrainskenya.com">✉️ info@smartbrainskenya.com</a>
   </div>
 </div>
 
-<!-- ── NAV TABS ── -->
-<div class="nav-wrap">
-  <div class="nav-tabs">
-    <a class="nav-tab active" href="#username"> Username</a>
-    <a class="nav-tab" href="#register"> Registration</a>
-    <a class="nav-tab" href="#approval"> Approval</a>
-    <a class="nav-tab" href="#sms"> SMS Issues</a>
-    <a class="nav-tab" href="#projects"> Projects</a>
-    <a class="nav-tab" href="#faq"> FAQs</a>
-  </div>
-</div>
-
-<div class="container">
-
-  <!-- ══════════════════════════════════════
-       SECTION 1 — STUDENT USERNAME (FIRST)
-  ══════════════════════════════════════ -->
-  <div class="section" id="username">
-    <div class="section-header">
-      <div class="section-number" style="background: var(--red);">1</div>
-      <div>
-        <div class="section-title">Start Here: Your Child's Student Username <span class="badge badge-important">Read First</span></div>
-        <div class="section-subtitle">You need this before you can register — get it right the first time</div>
-      </div>
-    </div>
-
-    <div class="alert danger">
-      <div class="alert-icon">🚨</div>
-      <div><strong>Do not register until you have confirmed your child's username.</strong> The username is required during registration and cannot be changed easily after the fact. An incorrect username means your registration will be stuck and will need admin correction.</div>
-    </div>
-
-    <div class="step-body" style="margin-bottom: 16px;">
-      <h4 style="margin-bottom: 8px;">What is a Student Username?</h4>
-      <p style="font-size:14px;">Every child enrolled with Smart Brains Kenya has a unique username. It is made up of a <strong>school code</strong> (a short 2-letter abbreviation for their school) and your <strong>child's name</strong>, joined by a dash. It looks like this:</p>
-    </div>
-
-    <div class="username-demo">
-      <div class="username-demo-label">How the username is structured</div>
-      <div class="username-formula">
-        <div class="formula-part">School Code</div>
-        <div class="formula-plus">—</div>
-        <div class="formula-part">Child's Name</div>
-        <div class="formula-equals">=</div>
-        <div class="formula-result">os-justineharmon</div>
-      </div>
-      <div class="username-demo-label" style="margin-top:16px; margin-bottom:8px;">Real examples</div>
-      <div class="username-examples">
-        <div class="username-example">
-          <span class="school">Office School</span>
-          <span class="code">os-justineharmon</span>
-        </div>
-        <div class="username-example">
-          <span class="school">Demo School</span>
-          <span class="code">ds-marywanjiku</span>
-        </div>
-        <div class="username-example">
-          <span class="school">Jawabu School</span>
-          <span class="code">js-coderisaac</span>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin: 24px 0 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: var(--dark);">How to find and confirm the username</div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-dot">1</div>
-        <div class="step-body">
-          <h4>Ask your child for their username</h4>
-          <p>Your child's ICT or Coding teacher gave them a username when they enrolled. Ask your child what it is. If they've forgotten, they should check with their teacher at school.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">2</div>
-        <div class="step-body">
-          <h4>Have your child test it on their student login page</h4>
-          <p>Ask your child to visit <strong>smartbrainskenya.com</strong>, click <strong>Student Section</strong>, and try logging in with their username. If they can log in successfully, the username is correct and you are ready to register.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">3</div>
-        <div class="step-body">
-          <h4>Write down the username exactly as it appears</h4>
-          <p>Note it down carefully — all <strong>lowercase letters</strong>, <strong>no spaces</strong>, with a <strong>dash</strong> in the correct place. For example: <strong style="font-family:monospace; color:var(--purple);">os-justineharmon</strong></p>
-          <div class="alert warning" style="margin-top: 12px;">
-            <div class="alert-icon">⚠️</div>
-            <div>Do not guess the username. Only proceed to registration once you have confirmed it by logging in successfully.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pro-tip">
-      <strong>💡 Once you have the confirmed username, you are ready to register.</strong><br>
-      Keep it somewhere you can copy from — you will need to type it into the registration form in the next step.
-    </div>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <!-- ══════════════════════════════════════
-       SECTION 2 — REGISTRATION
-  ══════════════════════════════════════ -->
-  <div class="section" id="register">
-    <div class="section-header">
-      <div class="section-number">2</div>
-      <div>
-        <div class="section-title">How to Register</div>
-        <div class="section-subtitle">Create your parent account — you need your child's username from Step 1</div>
-      </div>
-    </div>
-
-    <div class="alert info">
-      <div class="alert-icon">✅</div>
-      <div>You should already have your child's confirmed username from <strong>Section 1</strong>. If not, go back and complete that step first before registering.</div>
-    </div>
-
-    <div class="steps" style="margin-top: 24px;">
-      <div class="step">
-        <div class="step-dot">1</div>
-        <div class="step-body">
-          <h4>Go to the Smart Brains Kenya website</h4>
-          <p>Open your browser and visit <strong>smartbrainskenya.com</strong>. At the top right, tap the <strong>"Parent Section"</strong> button (blue button in the navigation bar).</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-dot">2</div>
-        <div class="step-body">
-          <h4>Go to Sign Up</h4>
-          <p>You will land on the login page. Since you don't have an account yet, tap <strong>"Don't have an account? Sign up today!"</strong> at the bottom of the screen.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-dot">3</div>
-        <div class="step-body">
-          <h4>Fill in your details</h4>
-          <p>Complete the registration form with the following:</p>
-          <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
-            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
-              <span style="color:var(--purple); font-weight:700; min-width:20px;">•</span>
-              <span><strong>First & Last Name</strong> — your name as the parent/guardian</span>
-            </div>
-            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
-              <span style="color:var(--purple); font-weight:700; min-width:20px;">•</span>
-              <span><strong>Email Address</strong></span>
-            </div>
-            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
-              <span style="color:var(--purple); font-weight:700; min-width:20px;">•</span>
-              <span><strong>Your Role</strong> — choose Mom, Dad, or Guardian</span>
-            </div>
-            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
-              <span style="color:var(--purple); font-weight:700; min-width:20px;">•</span>
-              <span><strong>WhatsApp Number</strong> — enter without the leading zero. E.g. if your number is <em>0712345678</em>, enter <em>712345678</em>. This will also be your login username.</span>
-            </div>
-            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px;">
-              <span style="color:var(--purple); font-weight:700; min-width:20px;">•</span>
-              <span><strong>Password</strong> — choose a password and confirm it</span>
-            </div>
-            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px; color: #065F46;">
-              <span style="font-weight:700; min-width:20px;">•</span>
-              <span><strong>Child's Student Username</strong> — paste in the username you confirmed in Section 1 above (e.g. <span style="font-family:monospace; font-weight:700;">os-justineharmon</span>)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-dot">4</div>
-        <div class="step-body">
-          <h4>Agree to Terms & tap "Create Account"</h4>
-          <p>Check the box agreeing to receive WhatsApp updates and the Terms & Conditions, then tap <strong>"Create Account"</strong> to submit your registration.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="alert info" style="margin-top: 8px;">
-      <div class="alert-icon">ℹ️</div>
-      <div>After registering, your account will be <strong>pending approval</strong> by your child's school. You will receive an SMS on your WhatsApp number once you have been approved. See <strong>Section 3</strong> for what to expect next.</div>
-    </div>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <!-- ══════════════════════════════════════
-       SECTION 3 — APPROVAL
-  ══════════════════════════════════════ -->
-  <div class="section" id="approval">
-    <div class="section-header">
-      <div class="section-number" style="background: var(--green);">3</div>
-      <div>
-        <div class="section-title">Getting Approved</div>
-        <div class="section-subtitle">What happens after you register</div>
-      </div>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-dot done">✓</div>
-        <div class="step-body">
-          <h4>Registration submitted</h4>
-          <p>Your account is created and is now <strong>pending approval</strong>.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">2</div>
-        <div class="step-body">
-          <h4>Follow up with your school</h4>
-          <p>Contact your child's <strong>ICT teacher or Coding patron</strong> at school and let them know you have registered. They will approve your account from the school side.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">3</div>
-        <div class="step-body">
-          <h4>You will receive an SMS confirmation</h4>
-          <p>Once approved, you will receive an SMS on your registered WhatsApp number that reads:</p>
-          <div style="background: var(--bg); border-left: 3px solid var(--purple); padding: 12px 14px; border-radius: 8px; margin-top: 10px; font-size: 13px; font-style: italic; color: var(--dark);">
-            "Hi [Name], your Smart Brains Kenya parent account has been approved! Login at application.smartbrainskenya.com..."
-          </div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">4</div>
-        <div class="step-body">
-          <h4>Your child can now access Home Projects</h4>
-          <p>Once approved, your child can log in to their student dashboard, go to <strong>Home Projects</strong>, and request an access code. That code will be sent directly to your WhatsApp number.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="alert warning">
-      <div class="alert-icon">⚠️</div>
-      <div><strong>Did not receive the approval SMS?</strong> This usually means your phone number has promotional messages blocked. See <strong>Section 4</strong> below to fix this.</div>
-    </div>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <!-- ══════════════════════════════════════
-       SECTION 4 — SMS / BLACKLIST
-  ══════════════════════════════════════ -->
-  <div class="section" id="sms">
-    <div class="section-header">
-      <div class="section-number" style="background: #D97706;">4</div>
-      <div>
-        <div class="section-title">Not Receiving SMS?</div>
-        <div class="section-subtitle">How to fix blocked promotional messages</div>
-      </div>
-    </div>
-
-    <p style="font-size:14px; margin-bottom:16px;">If you registered but did not receive your approval SMS or your child's access code, your phone number may be on a <strong>promotional messages blacklist</strong>. This happens when a number has opted out of promotional SMS — usually by mistake or automatically by the carrier.</p>
-
-    <div class="alert danger">
-      <div class="alert-icon">🚫</div>
-      <div><strong>This affects Safaricom, Airtel, and Telkom numbers.</strong> The Smart Brains system cannot deliver any SMS to numbers that have blocked promotional messages.</div>
-    </div>
-
-    <div style="margin: 24px 0;">
-      <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: var(--dark); margin-bottom: 16px;">How to re-enable promotional SMS:</div>
-      <div class="ussd-box">
-        <div class="ussd-label">Dial this code on your phone</div>
-        <div class="ussd-code">*456*9*5*5#</div>
-        <div class="ussd-instruction">Works on Safaricom numbers · Select "Allow All" when prompted</div>
-      </div>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-dot">1</div>
-        <div class="step-body">
-          <h4>Open your phone dialler</h4>
-          <p>Using the phone number you registered with, open your regular phone dialler (the one you use to make calls).</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">2</div>
-        <div class="step-body">
-          <h4>Dial <span style="font-family:monospace; color:var(--purple);">*456*9*5*5#</span> and press Call</h4>
-          <p>A menu will appear on screen. Follow the prompts to <strong>allow all promotional messages</strong>.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">3</div>
-        <div class="step-body">
-          <h4>Wait about 1 hour</h4>
-          <p>After re-enabling, please wait approximately <strong>1 hour</strong> for the changes to take effect across the network.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">4</div>
-        <div class="step-body">
-          <h4>Ask your child to request the access code again</h4>
-          <p>After the 1-hour wait, have your child log in to their student dashboard, go to <strong>Home Projects</strong>, and request a new access code. It should now arrive on your number.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="alert success">
-      <div>If the issue persists after following these steps, contact your school's ICT/Coding patron or reach out to Smart Brains Kenya support directly.</div>
-    </div>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <!-- ══════════════════════════════════════
-       SECTION 5 — HOME PROJECTS & SUBMISSION
-  ══════════════════════════════════════ -->
-  <div class="section" id="projects">
-    <div class="section-header">
-      <div class="section-number" style="background: #0EA5E9;">5</div>
-      <div>
-        <div class="section-title">Home Projects & Submission <span class="badge badge-new">New</span></div>
-        <div class="section-subtitle">How to view and submit your child's project for review</div>
-      </div>
-    </div>
-
-    <div class="alert info">
-      <div class="alert-icon">📌</div>
-      <div>Once your account is approved and your child has completed their home project, <strong>you as the parent need to submit it for tutor review</strong> through your dashboard.</div>
-    </div>
-
-    <div style="margin-top: 24px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: var(--dark); margin-bottom: 16px;">Step-by-step: Submitting your child's project</div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-dot">1</div>
-        <div class="step-body">
-          <h4>Log in to your Parent Dashboard</h4>
-          <p>Visit <strong>application.smartbrainskenya.com</strong>, enter your phone number (without leading zero) and your password, then tap <strong>Submit</strong>.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">2</div>
-        <div class="step-body">
-          <h4>Tap "Projects" from the bottom navigation</h4>
-          <p>At the bottom of your screen you will see Home, Reports, Projects, and Gallery. Tap <strong>Projects</strong>.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">3</div>
-        <div class="step-body">
-          <h4>Select the correct project</h4>
-          <p>If you have more than one child linked to your account, you will see multiple projects listed. Tap on the project for the child whose work you want to submit.</p>
-          <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
-            <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #1D4ED8; font-weight: 600;">🔵 In Progress</div>
-            <div style="background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #92400E; font-weight: 600;">🟡 Pending Review</div>
-          </div>
-          <p style="margin-top:8px; font-size:13px; color:var(--text-light);">A project showing <strong>"In Progress"</strong> is ready to be submitted. <strong>"Pending Review"</strong> means it has already been submitted and is awaiting the tutor.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">4</div>
-        <div class="step-body">
-          <h4>Leave feedback (optional)</h4>
-          <p>You can tap on <strong>Feedback</strong> to view messages between you and the tutor, or to send a message about your child's project.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">5</div>
-        <div class="step-body">
-          <h4>Tap "Submit for Tutor Review"</h4>
-          <p>Tap the purple <strong>"Submit for Tutor Review"</strong> button. A confirmation screen will appear — you can optionally add a note to the tutor. Tap <strong>"Submit for Review"</strong> to confirm.</p>
-          <div class="alert warning" style="margin-top: 12px;">
-            <div class="alert-icon">⚠️</div>
-            <div><strong>Note:</strong> Once submitted, your child will not be able to make changes to the project until the tutor responds.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15px; color: var(--dark); margin-bottom: 16px;">Adding a Second Child to Your Account</div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-dot">1</div>
-        <div class="step-body">
-          <h4>Log in and go to your Home screen</h4>
-          <p>Once logged in, you'll see an <strong>"Add Child"</strong> button at the top right of your home screen.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-dot">2</div>
-        <div class="step-body">
-          <h4>Enter your second child's username</h4>
-          <p>A pop-up will appear asking for the <strong>Child Username</strong> and your relationship to them. Enter the username (e.g. <span style="font-family:monospace; color:var(--purple);">ds-marywanjiku</span>) and tap <strong>"Add Child"</strong>.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="alert info" style="margin-top: 8px;">
-      <div class="alert-icon">ℹ️</div>
-      <div>You can only register <strong>one child during the initial sign-up</strong>. Additional children can be added after logging in using the <strong>Add Child</strong> button on the home screen.</div>
-    </div>
-  </div>
-
-</div><!-- /container -->
-
-<!-- ══════════════════════════════════════
-     FAQ SECTION
-══════════════════════════════════════ -->
-<div class="faq-section" id="faq">
-  <div class="container">
-    <div class="faq-header">
-      <h2>Frequently Asked Questions</h2>
-      <p>Quick answers to the most common parent questions</p>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">Why is my registration not going through?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">The most common reason is an incorrect student username. The username must match exactly what your child was given by their school — including the school code prefix and the dash. Ask your child to test logging in to their student dashboard first, then use that exact username when registering.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">I registered but haven't received any SMS. What do I do?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">Your number may have promotional messages blocked. Dial <strong>*456*9*5*5#</strong> on the phone number you registered with, follow the prompts to allow promotional messages, wait about 1 hour, and then ask your child to request the access code again.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">What is my login username for the parent dashboard?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">Your login username is your <strong>WhatsApp phone number without the leading zero</strong>. For example, if your number is 0712345678, you log in using <strong>712345678</strong>.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">Where do I find my child's student username?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">The username was provided by your child's ICT teacher or Smart Brains tutor when they enrolled. If your child doesn't remember it, ask them to check with their coding teacher at school. Have your child try logging in to the student section to confirm the username before you register.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">I entered the wrong username during registration. How do I fix it?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">An incorrect username needs to be corrected by a Smart Brains administrator. Contact your school's ICT/Coding patron and let them know. They will escalate the correction. To avoid this, always verify the username by testing it on the student login page first.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">How long does approval take after I register?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">Approval is done by your school's ICT patron. It can happen within minutes or take up to a day depending on when they are available. You can speed this up by contacting the ICT teacher directly to let them know you've registered. Once approved, you'll receive an SMS immediately.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">My child received the access code but it expired. What now?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">Access codes expire after 1 hour. Your child simply needs to go back to their Home Projects on the student dashboard and request a new code. A fresh code will be sent to your WhatsApp number.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">Can I add more than one child to my account?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">Yes. You can only register one child during the initial sign-up process. After logging in, tap the <strong>"Add Child"</strong> button on the home screen to link additional children using their student usernames.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">What does "Submit for Tutor Review" do?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">Submitting for tutor review sends your child's completed home project to their tutor for marking and grading. Once submitted, your child will not be able to make changes to the project until the tutor reviews it and sends feedback. You can optionally leave a message for the tutor when submitting.</div>
-    </div>
-
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <button class="faq-question">I can see messages between me and the tutor. How do I reply?<div class="faq-icon">+</div></button>
-      <div class="faq-answer">On the project detail page, tap <strong>Feedback</strong> to open the message thread. Type your message in the box at the bottom and tap the send button to reply.</div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════
-     CONTACT / FOOTER
-══════════════════════════════════════ -->
-<div class="contact-section">
-  <div class="container">
-    <h3>Still need help?</h3>
-    <p>Reach out to the Smart Brains Kenya team and we'll sort you out.</p>
-    <div class="contact-cards">
-      <a class="contact-card" href="tel:+254793474747">
-        <div class="contact-card-icon">📞</div>
-        <div class="contact-card-label">Call Us</div>
-        <div class="contact-card-value">+254 793 47 47 47</div>
-      </a>
-      <a class="contact-card" href="mailto:info@smartbrainskenya.com">
-        <div class="contact-card-icon">✉️</div>
-        <div class="contact-card-label">Email</div>
-        <div class="contact-card-value">info@smartbrainskenya.com</div>
-      </a>
-      <a class="contact-card" href="https://smartbrainskenya.com">
-        <div class="contact-card-icon">🌐</div>
-        <div class="contact-card-label">Website</div>
-        <div class="contact-card-value">smartbrainskenya.com</div>
-      </a>
-    </div>
-    <p style="margin-top: 32px; font-size: 12px; color: rgba(255,255,255,0.4);">Smart Brains Kenya · Coding in 102 Schools · In partnership with Mastercard Foundation</p>
-  </div>
-</div>
-
-<script>
-  function toggleFaq(item) {
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
-
-  const sections = ['username','register','approval','sms','projects','faq'];
-  const tabs = document.querySelectorAll('.nav-tab');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && window.scrollY >= el.offsetTop - 120) current = id;
-    });
-    tabs.forEach(t => {
-      t.classList.toggle('active', t.getAttribute('href') === '#' + current);
-    });
-  });
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(tab.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-</script>
 </body>
 </html>
